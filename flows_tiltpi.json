@@ -1,0 +1,3972 @@
+[
+    {
+        "id": "dab61356.33b5b",
+        "type": "tab",
+        "label": "Boot",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "340c01ee.e2eb16",
+        "type": "tab",
+        "label": "Übersicht",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "18e32c36.87e98c",
+        "type": "tab",
+        "label": "Spiellisten",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9c631078.7c4b3",
+        "type": "tab",
+        "label": "Spielansage",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b897de6c.9f0a08",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0080ff",
+                "baseFont": "Gill Sans,Geneva,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Gill Sans,Geneva,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Skat",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#666666",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Skat Liste",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "db42e0bf.c4b188",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Skatlisten",
+        "icon": "fa-list-alt",
+        "order": 2
+    },
+    {
+        "id": "52d646af.227228",
+        "type": "ui_group",
+        "z": "",
+        "name": "Skatlisten",
+        "tab": "db42e0bf.c4b188",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": true
+    },
+    {
+        "id": "8b5dbf99.c90fd",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "skat",
+        "tz": ""
+    },
+    {
+        "id": "62fd83c.7540a7c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Augen & Eintragen",
+        "tab": "db42e0bf.c4b188",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "12c40284.9ad24d",
+        "type": "ui_group",
+        "z": "",
+        "name": "Punkteblatt",
+        "tab": "db42e0bf.c4b188",
+        "order": 5,
+        "disp": true,
+        "width": "17",
+        "collapse": false
+    },
+    {
+        "id": "812c1947.8e3e78",
+        "type": "ui_group",
+        "z": "",
+        "name": "Spielansage",
+        "tab": "db42e0bf.c4b188",
+        "order": 2,
+        "disp": false,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "eefaa3f4.6d845",
+        "type": "ui_group",
+        "z": "",
+        "name": "Extras",
+        "tab": "db42e0bf.c4b188",
+        "order": 4,
+        "disp": false,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "7ca6b914.c472e8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "52d646af.227228",
+        "order": 11,
+        "width": "6",
+        "height": 1
+    },
+    {
+        "id": "b0db1755.36689",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "52d646af.227228",
+        "order": 7,
+        "width": "2",
+        "height": 1
+    },
+    {
+        "id": "528f1cb2.cb4d6c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "52d646af.227228",
+        "order": 13,
+        "width": "12",
+        "height": 1
+    },
+    {
+        "id": "73973943.53fed",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "812c1947.8e3e78",
+        "order": 2,
+        "width": "6",
+        "height": 1
+    },
+    {
+        "id": "551f84d0.1cec44",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Übersicht",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "9c8a547c.ca439",
+        "type": "ui_group",
+        "z": "",
+        "name": "All Time Scores",
+        "tab": "551f84d0.1cec44",
+        "order": 1,
+        "disp": true,
+        "width": "17",
+        "collapse": false
+    },
+    {
+        "id": "d5de2251.0a1408",
+        "type": "ui_group",
+        "z": "",
+        "name": "Tabelle Punkte",
+        "tab": "551f84d0.1cec44",
+        "order": 2,
+        "disp": true,
+        "width": "17",
+        "collapse": true
+    },
+    {
+        "id": "b196fe2c.6eb3f",
+        "type": "ui_group",
+        "z": "",
+        "name": "Tabelle Beträge",
+        "tab": "551f84d0.1cec44",
+        "order": 3,
+        "disp": true,
+        "width": "17",
+        "collapse": true
+    },
+    {
+        "id": "71a01d47.cc5dec",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "62fd83c.7540a7c",
+        "order": 2,
+        "width": "3",
+        "height": 1
+    },
+    {
+        "id": "70ae99ec.5e38f",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9c8a547c.ca439",
+        "order": 2,
+        "width": "14",
+        "height": "1"
+    },
+    {
+        "id": "ebbe3fa0.6b6768",
+        "type": "ui_group",
+        "z": "",
+        "name": "Graphs",
+        "tab": "c42fab90.8ac0c8",
+        "order": 4,
+        "disp": false,
+        "width": "18",
+        "collapse": false
+    },
+    {
+        "id": "c42fab90.8ac0c8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Charts",
+        "icon": "show_chart",
+        "order": 3
+    },
+    {
+        "id": "b30a14c.985d968",
+        "type": "ui_text_input",
+        "z": "18e32c36.87e98c",
+        "name": "Einsatz",
+        "label": "Einsatz (Cents)",
+        "tooltip": "",
+        "group": "52d646af.227228",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "9fcfcd.0832803"
+            ]
+        ]
+    },
+    {
+        "id": "6e00be9d.0fa71",
+        "type": "ui_text_input",
+        "z": "18e32c36.87e98c",
+        "name": "Max Loss",
+        "label": "Max Loss (Dollar)",
+        "tooltip": "",
+        "group": "52d646af.227228",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "e3e7eda0.e329e"
+            ]
+        ]
+    },
+    {
+        "id": "b12e32c0.9a8b1",
+        "type": "ui_dropdown",
+        "z": "18e32c36.87e98c",
+        "name": "Spieler 1",
+        "label": "Spieler 1",
+        "tooltip": "",
+        "place": "Wähle",
+        "group": "52d646af.227228",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "c0f64e31.7f9f"
+            ]
+        ]
+    },
+    {
+        "id": "9d84421c.67527",
+        "type": "ui_button",
+        "z": "18e32c36.87e98c",
+        "name": "Abschliessen",
+        "group": "52d646af.227228",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Abschliessen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "Abgeschlossen",
+        "payloadType": "str",
+        "topic": "",
+        "x": 750,
+        "y": 660,
+        "wires": [
+            [
+                "a30d92b1.d033b"
+            ]
+        ]
+    },
+    {
+        "id": "d559e712.df0ec8",
+        "type": "ui_date_picker",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "label": "Datum",
+        "group": "52d646af.227228",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "topic": "",
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "76031143.b3ac4"
+            ]
+        ]
+    },
+    {
+        "id": "84e6402e.607af",
+        "type": "ui_text",
+        "z": "18e32c36.87e98c",
+        "group": "52d646af.227228",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "Spielliste",
+        "label": "Liste",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "42a18217.2a4a1c",
+        "type": "ui_dropdown",
+        "z": "18e32c36.87e98c",
+        "name": "Spieler 2",
+        "label": "Spieler 2",
+        "tooltip": "",
+        "place": "Wähle",
+        "group": "52d646af.227228",
+        "order": 12,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 740,
+        "y": 460,
+        "wires": [
+            [
+                "5aac9585.20444c"
+            ]
+        ]
+    },
+    {
+        "id": "11bb12a8.d7d41d",
+        "type": "ui_dropdown",
+        "z": "18e32c36.87e98c",
+        "name": "Spieler 3",
+        "label": "Spieler 3",
+        "tooltip": "",
+        "place": "Wähle",
+        "group": "52d646af.227228",
+        "order": 14,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "54d4cd91.c50bf4"
+            ]
+        ]
+    },
+    {
+        "id": "dbbdf0e1.5c935",
+        "type": "ui_text",
+        "z": "18e32c36.87e98c",
+        "group": "52d646af.227228",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "name": "Spiele",
+        "label": "Spiele",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c00de378.29f3c",
+        "type": "ui_dropdown",
+        "z": "18e32c36.87e98c",
+        "name": "Spielliste Combo",
+        "label": "",
+        "tooltip": "",
+        "place": "Wähle Spielliste",
+        "group": "52d646af.227228",
+        "order": 1,
+        "width": "12",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "b495d017.37ce4"
+            ]
+        ]
+    },
+    {
+        "id": "7784aeae.02736",
+        "type": "mysql",
+        "z": "18e32c36.87e98c",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "86a48724.16a288"
+            ]
+        ]
+    },
+    {
+        "id": "1a1320ae.660d6f",
+        "type": "template",
+        "z": "18e32c36.87e98c",
+        "name": "SQL Combo Options",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT  \nid, \nCONCAT( \nDATE_FORMAT(datum, '%Y-%b-%d') \n, ' | ', serie \n, ' | ', status \n, ' | ', spiele \n, ' Spiele' \n) As label \nFROM vw_serien \nORDER BY id DESC \n;",
+        "output": "str",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "7784aeae.02736"
+            ]
+        ]
+    },
+    {
+        "id": "8634466.9ea1cb8",
+        "type": "debug",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 230,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "8ec3c2c4.3a69",
+        "type": "template",
+        "z": "18e32c36.87e98c",
+        "name": "SQL Serie",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT \n*, \n(SELECT CONCAT('[',GROUP_CONCAT('\\\"',nick,'\\\"'),']') FROM spieler) as spieleropt\nFROM vw_serien\nWHERE id = {{global.serie.id}}\n;",
+        "output": "str",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "888ae407.ea77c8"
+            ]
+        ]
+    },
+    {
+        "id": "888ae407.ea77c8",
+        "type": "mysql",
+        "z": "18e32c36.87e98c",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "c759b484.9bbca8",
+                "bff9e8bf.f1f18"
+            ]
+        ]
+    },
+    {
+        "id": "b495d017.37ce4",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "> global.serie.id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serie.id",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "472b4b8d.92f964",
+                "bdacf610.c0c778"
+            ]
+        ]
+    },
+    {
+        "id": "c759b484.9bbca8",
+        "type": "function",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "func": "var serie_enabled = (msg.payload[0].status == 'Offen');\n\nvar msg_template = {}; \nmsg_template.enabled = serie_enabled;\n\nvar msg_status = JSON.parse(JSON.stringify(msg_template));\nvar msg_einsatz = JSON.parse(JSON.stringify(msg_template)); msg_einsatz.payload = msg.payload[0].einsatz;\nvar msg_max_loss =JSON.parse(JSON.stringify(msg_template)); msg_max_loss.payload = msg.payload[0].max_loss;\n\nvar msg_datum =JSON.parse(JSON.stringify(msg_template)); msg_datum.payload = msg.payload[0].datum;\nvar msg_serie = JSON.parse(JSON.stringify(msg_template)); msg_serie.payload = msg.payload[0].serie;\nvar msg_spiele = JSON.parse(JSON.stringify(msg_template)); msg_spiele.payload = msg.payload[0].spiele;\n\nvar spieler = JSON.parse(msg.payload[0].spieleropt);\nmsg_template.options = spieler;\nvar msg_spieler1 = JSON.parse(JSON.stringify(msg_template)); msg_spieler1.payload = msg.payload[0].spieler1;\nvar msg_spieler2 = JSON.parse(JSON.stringify(msg_template)); msg_spieler2.payload = msg.payload[0].spieler2;\nvar msg_spieler3 = JSON.parse(JSON.stringify(msg_template)); msg_spieler3.payload = msg.payload[0].spieler3;\n\nreturn [msg_datum,\n\t\tmsg_serie,\n\t\tmsg_spiele,\n\t\tmsg_spieler1,\n\t\tmsg_spieler2,\n\t\tmsg_spieler3,\n\t\tmsg_einsatz,\n\t\tmsg_max_loss,\n\t\tmsg_status];",
+        "outputs": 9,
+        "noerr": 0,
+        "x": 550,
+        "y": 500,
+        "wires": [
+            [
+                "d559e712.df0ec8"
+            ],
+            [
+                "84e6402e.607af"
+            ],
+            [
+                "dbbdf0e1.5c935"
+            ],
+            [
+                "b12e32c0.9a8b1"
+            ],
+            [
+                "42a18217.2a4a1c"
+            ],
+            [
+                "11bb12a8.d7d41d"
+            ],
+            [
+                "b30a14c.985d968"
+            ],
+            [
+                "6e00be9d.0fa71"
+            ],
+            [
+                "9d84421c.67527"
+            ]
+        ],
+        "inputLabels": [
+            "Record"
+        ],
+        "outputLabels": [
+            "Datum",
+            "Liste",
+            "Spiele",
+            "Spieler 1",
+            "Spieler 2",
+            "Spieler 3",
+            "Einsatz",
+            "Max Loss",
+            "Status"
+        ]
+    },
+    {
+        "id": "472b4b8d.92f964",
+        "type": "template",
+        "z": "18e32c36.87e98c",
+        "name": "SQL User created New Series?",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO serien (id)\nSELECT cmb.* FROM \n(SELECT {{payload}} as id) cmb\nLEFT JOIN serien\non serien.id = cmb.id\nWHERE serien.id is null",
+        "output": "str",
+        "x": 170,
+        "y": 860,
+        "wires": [
+            [
+                "c0ea306e.ded1a"
+            ]
+        ]
+    },
+    {
+        "id": "c0ea306e.ded1a",
+        "type": "mysql",
+        "z": "18e32c36.87e98c",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 370,
+        "y": 860,
+        "wires": [
+            [
+                "34a478f3.0dcdb8"
+            ]
+        ]
+    },
+    {
+        "id": "34a478f3.0dcdb8",
+        "type": "switch",
+        "z": "18e32c36.87e98c",
+        "name": "SQL has affected rows?",
+        "property": "payload.affectedRows",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 860,
+        "wires": [
+            [
+                "138b5d15.5d4d9b"
+            ]
+        ],
+        "outputLabels": [
+            "yes"
+        ]
+    },
+    {
+        "id": "1ac65ab5.75dc85",
+        "type": "template",
+        "z": "18e32c36.87e98c",
+        "name": "SQL Delete",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DELETE FROM serien\nWHERE id = {{global.serie.id}}\n;",
+        "output": "str",
+        "x": 910,
+        "y": 700,
+        "wires": [
+            [
+                "7670a06e.02d2d"
+            ]
+        ]
+    },
+    {
+        "id": "7670a06e.02d2d",
+        "type": "mysql",
+        "z": "18e32c36.87e98c",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 1070,
+        "y": 700,
+        "wires": [
+            [
+                "34a478f3.0dcdb8"
+            ]
+        ]
+    },
+    {
+        "id": "2d36165b.0acbaa",
+        "type": "catch",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "scope": null,
+        "x": 80,
+        "y": 20,
+        "wires": [
+            [
+                "8634466.9ea1cb8"
+            ]
+        ]
+    },
+    {
+        "id": "67726fe7.3fd4",
+        "type": "template",
+        "z": "18e32c36.87e98c",
+        "name": "SQL Update",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "UPDATE serien \nSet {{field}} = '{{payload}}' \nWHERE id = {{serien_id}} \n;",
+        "output": "str",
+        "x": 1310,
+        "y": 760,
+        "wires": [
+            [
+                "ef07d4ec.a34428"
+            ]
+        ]
+    },
+    {
+        "id": "ef07d4ec.a34428",
+        "type": "mysql",
+        "z": "18e32c36.87e98c",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 1450,
+        "y": 760,
+        "wires": [
+            [
+                "34a478f3.0dcdb8"
+            ]
+        ]
+    },
+    {
+        "id": "4f01946f.ee25dc",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Get Serien ID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serien_id",
+                "pt": "msg",
+                "to": "serie.id",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 460,
+        "wires": [
+            [
+                "67726fe7.3fd4"
+            ]
+        ]
+    },
+    {
+        "id": "c0f64e31.7f9f",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "spieler1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 420,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "5aac9585.20444c",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "spieler2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "54d4cd91.c50bf4",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "spieler3",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 500,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "9fcfcd.0832803",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "einsatz",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 560,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "e3e7eda0.e329e",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "max_loss",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 600,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "a30d92b1.d033b",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "status",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 660,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "76031143.b3ac4",
+        "type": "change",
+        "z": "18e32c36.87e98c",
+        "name": "Set Field",
+        "rules": [
+            {
+                "t": "set",
+                "p": "field",
+                "pt": "msg",
+                "to": "datum",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 280,
+        "wires": [
+            [
+                "4f01946f.ee25dc"
+            ]
+        ]
+    },
+    {
+        "id": "1e456068.57361",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "SQL CALL sp_tabelle_spielliste",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL sp_tabelle_spielliste({{global.serie.id}});\n",
+        "output": "str",
+        "x": 650,
+        "y": 1400,
+        "wires": [
+            [
+                "a9e8353d.4c8e38"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "a9e8353d.4c8e38",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 910,
+        "y": 1400,
+        "wires": [
+            [
+                "e203e1c2.8f1ab"
+            ]
+        ]
+    },
+    {
+        "id": "510553db.a229fc",
+        "type": "debug",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 370,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "22722ed0.f55512",
+        "type": "catch",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "scope": null,
+        "x": 230,
+        "y": 40,
+        "wires": [
+            [
+                "510553db.a229fc"
+            ]
+        ]
+    },
+    {
+        "id": "e203e1c2.8f1ab",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1400,
+        "wires": [
+            [
+                "83899cdc.aebb1"
+            ]
+        ]
+    },
+    {
+        "id": "d34a4968.1ef178",
+        "type": "ui_template",
+        "z": "9c631078.7c4b3",
+        "group": "12c40284.9ad24d",
+        "name": "Punkteblatt",
+        "order": 1,
+        "width": "17",
+        "height": "7",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table class=\"fixed_header\">\n    <thead>\n        <tr>\n            <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"obj in msg.payload\">\n            <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n        </tr>  \n    </tbody>\n</table>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1390,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "355a89a0.9dc4c6",
+        "type": "link out",
+        "z": "18e32c36.87e98c",
+        "name": "Serie Selected",
+        "links": [
+            "f6f11481.52e918"
+        ],
+        "x": 515,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f6f11481.52e918",
+        "type": "link in",
+        "z": "9c631078.7c4b3",
+        "name": "DB: Read Serie",
+        "links": [
+            "355a89a0.9dc4c6"
+        ],
+        "x": 175,
+        "y": 180,
+        "wires": [
+            [
+                "d4b786e6.bdf008"
+            ]
+        ]
+    },
+    {
+        "id": "83899cdc.aebb1",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 1400,
+        "wires": [
+            [
+                "d34a4968.1ef178"
+            ]
+        ]
+    },
+    {
+        "id": "5a4082e3.fc67ac",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "SQL CALL sp_tabelle_spielliste_ranking",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL sp_tabelle_spielliste_ranking({{global.serie.id}});\n",
+        "output": "str",
+        "x": 680,
+        "y": 1340,
+        "wires": [
+            [
+                "6cc71d87.8f8d64"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "6cc71d87.8f8d64",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 910,
+        "y": 1337,
+        "wires": [
+            [
+                "74ac1684.e27958"
+            ]
+        ]
+    },
+    {
+        "id": "74ac1684.e27958",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1337,
+        "wires": [
+            [
+                "3bb14329.e639cc"
+            ]
+        ]
+    },
+    {
+        "id": "db8df787.f25358",
+        "type": "ui_template",
+        "z": "9c631078.7c4b3",
+        "group": "12c40284.9ad24d",
+        "name": "Ranking",
+        "order": 3,
+        "width": "17",
+        "height": "3",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table>\n    <tr>\n        <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1380,
+        "y": 1337,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3bb14329.e639cc",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 1337,
+        "wires": [
+            [
+                "db8df787.f25358"
+            ]
+        ]
+    },
+    {
+        "id": "8cf94acb.01b9e8",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Spielnummer",
+        "label": "Nr.:",
+        "tooltip": "",
+        "place": "Wähle",
+        "group": "812c1947.8e3e78",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1130,
+        "y": 100,
+        "wires": [
+            [
+                "2312591.5b63326"
+            ]
+        ]
+    },
+    {
+        "id": "28baf8cc.ad0038",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Grundspiel",
+        "label": "",
+        "tooltip": "",
+        "place": "Gespielt wurde ...",
+        "group": "812c1947.8e3e78",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic?",
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "206f4742.2279a8"
+            ]
+        ]
+    },
+    {
+        "id": "6747aa53.e556e4",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Gewinnstufe",
+        "label": "",
+        "tooltip": "",
+        "place": "Gewinnstufe",
+        "group": "812c1947.8e3e78",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            [
+                "d6515b4b.6f9a58"
+            ]
+        ]
+    },
+    {
+        "id": "bd9c8922.f14648",
+        "type": "ui_switch",
+        "z": "9c631078.7c4b3",
+        "name": "Kontra",
+        "label": "Kontra",
+        "tooltip": "",
+        "group": "eefaa3f4.6d845",
+        "order": 9,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-toggle-on fa-lg",
+        "oncolor": "#669933",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-toggle-off fa-lg",
+        "offcolor": "#CC0000",
+        "x": 1110,
+        "y": 720,
+        "wires": [
+            [
+                "ce3a92ab.2206b"
+            ]
+        ]
+    },
+    {
+        "id": "2c82efa9.b85e2",
+        "type": "ui_switch",
+        "z": "9c631078.7c4b3",
+        "name": "Re",
+        "label": "Re",
+        "tooltip": "",
+        "group": "eefaa3f4.6d845",
+        "order": 10,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-toggle-on fa-lg",
+        "oncolor": "#669933",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-toggle-off fa-lg",
+        "offcolor": "#CC0000",
+        "x": 1110,
+        "y": 800,
+        "wires": [
+            [
+                "b282a267.146c98"
+            ]
+        ]
+    },
+    {
+        "id": "e11b3f01.c89a7",
+        "type": "ui_switch",
+        "z": "9c631078.7c4b3",
+        "name": "Bock",
+        "label": "Bock",
+        "tooltip": "",
+        "group": "eefaa3f4.6d845",
+        "order": 10,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-toggle-on fa-lg",
+        "oncolor": "#669933",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-toggle-off fa-lg",
+        "offcolor": "#CC0000",
+        "x": 1110,
+        "y": 657,
+        "wires": [
+            [
+                "dd3574fa.51cd58"
+            ]
+        ]
+    },
+    {
+        "id": "b6f6a35c.7d187",
+        "type": "ui_button",
+        "z": "9c631078.7c4b3",
+        "name": "Spieler1",
+        "group": "812c1947.8e3e78",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.background}}",
+        "icon": "",
+        "payload": "spieler1",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1120,
+        "y": 860,
+        "wires": [
+            [
+                "2df9c78.d7520b8"
+            ]
+        ]
+    },
+    {
+        "id": "fc17c781.c94828",
+        "type": "ui_button",
+        "z": "9c631078.7c4b3",
+        "name": "Spieler2",
+        "group": "812c1947.8e3e78",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.background}}",
+        "icon": "",
+        "payload": "spieler2",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1120,
+        "y": 900,
+        "wires": [
+            [
+                "2df9c78.d7520b8"
+            ]
+        ]
+    },
+    {
+        "id": "a8324d3.8990eb",
+        "type": "ui_button",
+        "z": "9c631078.7c4b3",
+        "name": "Spieler3",
+        "group": "812c1947.8e3e78",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "{{msg.label}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.background}}",
+        "icon": "",
+        "payload": "spieler3",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1120,
+        "y": 940,
+        "wires": [
+            [
+                "2df9c78.d7520b8"
+            ]
+        ]
+    },
+    {
+        "id": "383d412c.b2bba6",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.topic = undefined;\n\nmsg.enabled = true; // enable dropdown for spielnummer combo\n\nmsg.options = msg.payload.map(item => {\n    const opt = {};\n    opt[item.spielnummer] = item.spielnummer;\n    return opt;\n    });\n\n// Sort descending\nmsg.options.sort((a,b) => {\n    return (Object.values(b)[0] - Object.values(a)[0]);\n})\n\nmsg.payload = flow.get(\"spiel\").spielnummer;\n\nif (global.get(\"serie\").status == 'Offen') {\n    msg.options.unshift({\"New\":0});        \n}\n\nreturn [{\"payload\":null},msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 940,
+        "y": 100,
+        "wires": [
+            [
+                "8cf94acb.01b9e8"
+            ],
+            [
+                "922c84f7.f4c34"
+            ]
+        ]
+    },
+    {
+        "id": "daa0e92.a9f6d18",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.options = global.get(\"grundspiele\").map(a => a.grundspiel);\nmsg.payload = flow.get(\"spiel\").grundspiel;\nreturn [{\"payload\":null},msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 940,
+        "y": 180,
+        "wires": [
+            [
+                "28baf8cc.ad0038"
+            ],
+            [
+                "fe2fa64.49aab58"
+            ]
+        ]
+    },
+    {
+        "id": "c757c08a.854198",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "Widgets enabled?",
+        "func": "\nmsg.topic = undefined;\nmsg.payload = {};\nmsg.enabled = (global.get(\"serie\").status == 'Offen');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 640,
+        "wires": [
+            [
+                "1e456068.57361",
+                "5a4082e3.fc67ac",
+                "a2f241f4.f5f7e8",
+                "8ba4ee34.cf7c7",
+                "8ef70e2c.492ed",
+                "5450a099.9e5e4",
+                "a473f077.36319",
+                "5f24e821.5e9a8",
+                "3348f984.45ed46",
+                "f21b4e6e.7838b8",
+                "e1927dd8.4af8e8",
+                "daa0e92.a9f6d18",
+                "961be0b3.601bc8",
+                "9aa7d191.c22868",
+                "2ebb7e1c.93b68a"
+            ]
+        ]
+    },
+    {
+        "id": "e1927dd8.4af8e8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.options = global.get(\"gewinnstufen\").map(a => a.gewinnstufe);\nmsg.payload = flow.get(\"spiel\").gewinnstufe;\nif (flow.get(\"spiel\").gewinnstufe === undefined) {\n    msg.payload = \"Einfach\";    \n}\nreturn [{\"payload\":null},msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 940,
+        "y": 260,
+        "wires": [
+            [
+                "6747aa53.e556e4"
+            ],
+            [
+                "42661960.f9cf88"
+            ]
+        ]
+    },
+    {
+        "id": "8191bb1e.c49e3",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "Spiel Info",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT \n*, \n(SELECT  \ncase \nwhen spieler1 = s.spieler then 'spieler1' \nwhen spieler2 = s.spieler then 'spieler2' \nwhen spieler3 = s.spieler then 'spieler3' \nend As spielernummer \nFROM serien where id = s.serie_id \nLIMIT 1 \n) As spielernummer \nFROM spiele s  \nwhere s.serie_id = {{global.serie.id}}  \nand s.spielnummer = {{flow.spiel.spielnummer}}  \n; \n \n\n",
+        "output": "str",
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "fd7bcb36.956ed"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "fd7bcb36.956ed",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "3da4a71b.82f02"
+            ]
+        ]
+    },
+    {
+        "id": "a2f241f4.f5f7e8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "getSpieler",
+        "func": "msg.payload = 0;\n\nif (flow.get(\"spiel\").status == 'G'){\n    var background_color = \"green\";\n} else\n{\n    var background_color = \"red\";\n}\n\nmsg.background = undefined;\n\nvar msg1 = JSON.parse(JSON.stringify(msg));\nvar msg2 = JSON.parse(JSON.stringify(msg));\nvar msg3 = JSON.parse(JSON.stringify(msg));\n\nmsg1.label = global.get(\"serie\").spieler1;\nmsg2.label = global.get(\"serie\").spieler2;\nmsg3.label = global.get(\"serie\").spieler3;\n\nswitch (flow.get(\"spiel\").spielernummer) {\n    case  \"spieler1\": msg1.background = background_color; break;\n    case  \"spieler2\": msg2.background = background_color; break;\n    case  \"spieler3\": msg3.background = background_color; break;\n}\n\nreturn [msg1,msg2,msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 940,
+        "y": 900,
+        "wires": [
+            [
+                "b6f6a35c.7d187"
+            ],
+            [
+                "fc17c781.c94828"
+            ],
+            [
+                "a8324d3.8990eb"
+            ]
+        ]
+    },
+    {
+        "id": "e1c3f7c2.5d6a58",
+        "type": "ui_switch",
+        "z": "9c631078.7c4b3",
+        "name": "Gewonnen?",
+        "label": "Gewonnen?",
+        "tooltip": "",
+        "group": "62fd83c.7540a7c",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "G",
+        "onvalueType": "str",
+        "onicon": "fa-toggle-on fa-2x",
+        "oncolor": "#669933",
+        "offvalue": "V",
+        "offvalueType": "str",
+        "officon": "fa-toggle-off fa-2x",
+        "offcolor": "#CC0000",
+        "x": 1130,
+        "y": 1080,
+        "wires": [
+            [
+                "8681e69b.40133"
+            ]
+        ]
+    },
+    {
+        "id": "206f4742.2279a8",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">grundspiel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.grundspiel",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d00c347.186435",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "<serie, <spiel",
+        "func": "var msg = {};\nmsg.spiel = flow.get(\"spiel\");\nmsg.serie = global.get(\"serie\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 700,
+        "wires": [
+            [
+                "68e095e6.95fcbc"
+            ]
+        ]
+    },
+    {
+        "id": "8e515c4.f62ada",
+        "type": "inject",
+        "z": "9c631078.7c4b3",
+        "name": "test",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 700,
+        "wires": [
+            [
+                "1d00c347.186435"
+            ]
+        ]
+    },
+    {
+        "id": "68e095e6.95fcbc",
+        "type": "debug",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 370,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1ab59fce.735de",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">spitzen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.spitzen",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab53fc98.0820b",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">augen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.augen",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 563,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f24e821.5e9a8",
+        "type": "ui_button",
+        "z": "9c631078.7c4b3",
+        "name": "Eintragen",
+        "group": "62fd83c.7540a7c",
+        "order": 6,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Eintragen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "Insert",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1120,
+        "y": 1140,
+        "wires": [
+            [
+                "96a33ba6.6a486"
+            ]
+        ]
+    },
+    {
+        "id": "3348f984.45ed46",
+        "type": "ui_button",
+        "z": "9c631078.7c4b3",
+        "name": "Loeschen",
+        "group": "62fd83c.7540a7c",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Loeschen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "Delete",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1120,
+        "y": 1180,
+        "wires": [
+            [
+                "6a24d6ea.e7154"
+            ]
+        ]
+    },
+    {
+        "id": "8681e69b.40133",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.status",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 1080,
+        "wires": [
+            [
+                "a2f241f4.f5f7e8"
+            ]
+        ]
+    },
+    {
+        "id": "d6515b4b.6f9a58",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">gewinnstufe",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.gewinnstufe",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c39dd86.1f4b4a8",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "SQL INSERT",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO spiele \n( \nserie_id, \nspielnummer, \ngrundspiel, \nspitzen, \ngewinnstufe, \nspieler, \nstatus, \nreizwert, \naugen, \nbock, \nkontra, \nre \n) \nVALUES \n(\n{{global.serie.id}},  \n{{flow.spiel.spielnummer}},  \n'{{flow.spiel.grundspiel}}', \n{{flow.spiel.spitzen}}, \n'{{flow.spiel.gewinnstufe}}', \n'{{flow.spiel.spieler}}', \n'{{flow.spiel.status}}', \n{{flow.spiel.reizwert}}, \n'{{flow.spiel.augen}}', \n'{{flow.spiel.bock}}', \n'{{flow.spiel.kontra}}', \n'{{flow.spiel.re}}' \n)\n; ",
+        "output": "str",
+        "x": 1770,
+        "y": 1140,
+        "wires": [
+            [
+                "c9e7eeba.1719a8"
+            ]
+        ]
+    },
+    {
+        "id": "c8716dd.356f09",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 1910,
+        "y": 1180,
+        "wires": [
+            [
+                "dd54228c.f0717"
+            ]
+        ]
+    },
+    {
+        "id": "6a24d6ea.e7154",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "SQL DEL SPIEL",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DELETE FROM spiele \nWHERE serie_id = {{global.serie.id}} \nAND spielnummer = {{flow.spiel.spielnummer}} \n;\n\n\n",
+        "output": "str",
+        "x": 1460,
+        "y": 1180,
+        "wires": [
+            [
+                "c8716dd.356f09"
+            ]
+        ]
+    },
+    {
+        "id": "2df9c78.d7520b8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">spieler",
+        "func": "flow.set(\"spiel.spielernummer\", msg.payload);\nflow.set(\"spiel.spieler\", global.get(\"serie\")[msg.payload]);\n// msg.spieler = flow.get(\"spiel\").spieler;\n// msg.spielernummer = flow.get(\"spiel\").spielernummer;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1300,
+        "y": 920,
+        "wires": [
+            [
+                "a2f241f4.f5f7e8"
+            ]
+        ]
+    },
+    {
+        "id": "dd54228c.f0717",
+        "type": "link out",
+        "z": "9c631078.7c4b3",
+        "name": "Spiel Updated",
+        "links": [
+            "26a6e9aa.8b729e"
+        ],
+        "x": 2175,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "8ba4ee34.cf7c7",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.topic = undefined;\nmsg.payload = (flow.get(\"spiel\").bock == 'X') || \n              false;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 660,
+        "wires": [
+            [
+                "e11b3f01.c89a7"
+            ]
+        ]
+    },
+    {
+        "id": "8ef70e2c.492ed",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.topic = undefined;\nmsg.payload = (flow.get(\"spiel\").kontra == 'X') || \n              false;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 720,
+        "wires": [
+            [
+                "bd9c8922.f14648"
+            ]
+        ]
+    },
+    {
+        "id": "5450a099.9e5e4",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.topic = undefined;\nmsg.payload = (flow.get(\"spiel\").re == 'X') || \n              false;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 800,
+        "wires": [
+            [
+                "2c82efa9.b85e2"
+            ]
+        ]
+    },
+    {
+        "id": "a473f077.36319",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.topic = undefined;\n\nmsg.payload = flow.get(\"spiel\").status;\nif (msg.payload === undefined){\n    msg.payload = 'G';\n}\n    \nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 1083,
+        "wires": [
+            [
+                "e1c3f7c2.5d6a58"
+            ]
+        ]
+    },
+    {
+        "id": "d720c07f.ea397",
+        "type": "link out",
+        "z": "9c631078.7c4b3",
+        "name": "Spiel Selected",
+        "links": [
+            "3e7e8d05.3908b2"
+        ],
+        "x": 1655,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fe2fa64.49aab58",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1010,
+        "y": 220,
+        "wires": [
+            [
+                "28baf8cc.ad0038"
+            ]
+        ]
+    },
+    {
+        "id": "42661960.f9cf88",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1010,
+        "y": 300,
+        "wires": [
+            [
+                "6747aa53.e556e4"
+            ]
+        ]
+    },
+    {
+        "id": "d4b786e6.bdf008",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "Serie Info",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT *\nFROM vw_serien\nwhere id = {{global.serie.id}}\n;\n\n\n",
+        "output": "str",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "1da7133c.b64b9d"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "1da7133c.b64b9d",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "e1b9ef47.89d928",
+                "6730c7b0.3d5478"
+            ]
+        ]
+    },
+    {
+        "id": "a4acc8fc.eaffc8",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "c757c08a.854198"
+            ]
+        ]
+    },
+    {
+        "id": "bff9e8bf.f1f18",
+        "type": "debug",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 570,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "dd2e959d.071eb",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "SQL DEL SPIELER",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DELETE FROM spiele \nWHERE serie_id = {{global.serie.id}} \nAND spielnummer = {{flow.spiel.spielnummer}} \nAND spieler = '{{flow.spiel.spieler}}' \n;\n\n\n",
+        "output": "str",
+        "x": 1470,
+        "y": 1140,
+        "wires": [
+            [
+                "f6cf9f83.e9b5e"
+            ]
+        ]
+    },
+    {
+        "id": "f6cf9f83.e9b5e",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 1630,
+        "y": 1140,
+        "wires": [
+            [
+                "c39dd86.1f4b4a8"
+            ]
+        ]
+    },
+    {
+        "id": "c9e7eeba.1719a8",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 1910,
+        "y": 1140,
+        "wires": [
+            [
+                "f7d2211e.d3ef8"
+            ]
+        ]
+    },
+    {
+        "id": "cdba96b.be50368",
+        "type": "change",
+        "z": "9c631078.7c4b3",
+        "name": ">reizwert",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spiel.reizwert",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2312591.5b63326",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "New Spielnummer?",
+        "func": "flow.set(\"spiel\", \n{\n    \"serie_id\" : global.get(\"serie\"),\n    \"spielnummer\" : msg.payload            \n});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1330,
+        "y": 100,
+        "wires": [
+            [
+                "d720c07f.ea397"
+            ]
+        ]
+    },
+    {
+        "id": "26a6e9aa.8b729e",
+        "type": "link in",
+        "z": "18e32c36.87e98c",
+        "name": "Refresh Spiellisten",
+        "links": [
+            "dd54228c.f0717",
+            "7e7701a7.c4ded8",
+            "138b5d15.5d4d9b"
+        ],
+        "x": 135,
+        "y": 80,
+        "wires": [
+            [
+                "1a1320ae.660d6f"
+            ]
+        ]
+    },
+    {
+        "id": "7c429e8e.aa0c1",
+        "type": "template",
+        "z": "340c01ee.e2eb16",
+        "name": "SQL Spieler Ranking",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL sp_tabelle_spieler_ranking()",
+        "output": "str",
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "55394e4a.10c898"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "55394e4a.10c898",
+        "type": "mysql",
+        "z": "340c01ee.e2eb16",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 690,
+        "y": 157,
+        "wires": [
+            [
+                "62834009.62fa88"
+            ]
+        ]
+    },
+    {
+        "id": "62834009.62fa88",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 157,
+        "wires": [
+            [
+                "397bfc9b.0dbfe4"
+            ]
+        ]
+    },
+    {
+        "id": "603fa470.3eecdc",
+        "type": "ui_template",
+        "z": "340c01ee.e2eb16",
+        "group": "9c8a547c.ca439",
+        "name": "Top Ranking",
+        "order": 3,
+        "width": "5",
+        "height": "3",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table>\n    <tr>\n        <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 1170,
+        "y": 157,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "397bfc9b.0dbfe4",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 157,
+        "wires": [
+            [
+                "603fa470.3eecdc"
+            ]
+        ]
+    },
+    {
+        "id": "9f043cff.6614c",
+        "type": "inject",
+        "z": "340c01ee.e2eb16",
+        "name": "Manual trigger",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0.5",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "3a1f3d85.c0c582"
+            ]
+        ]
+    },
+    {
+        "id": "6facd392.e170d4",
+        "type": "template",
+        "z": "340c01ee.e2eb16",
+        "name": "SQL Spieler Payouts",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL `sp_tabelle_spieler_payouts`();",
+        "output": "str",
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "246a75d6.994142"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "246a75d6.994142",
+        "type": "mysql",
+        "z": "340c01ee.e2eb16",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 690,
+        "y": 217,
+        "wires": [
+            [
+                "ec820c48.c4d028"
+            ]
+        ]
+    },
+    {
+        "id": "ec820c48.c4d028",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 217,
+        "wires": [
+            [
+                "ec226282.d164c"
+            ]
+        ]
+    },
+    {
+        "id": "b30d3236.3c0b",
+        "type": "ui_template",
+        "z": "340c01ee.e2eb16",
+        "group": "9c8a547c.ca439",
+        "name": "Top Beträge",
+        "order": 4,
+        "width": "5",
+        "height": "3",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table>\n    <tr>\n        <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 1170,
+        "y": 217,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec226282.d164c",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 217,
+        "wires": [
+            [
+                "b30d3236.3c0b"
+            ]
+        ]
+    },
+    {
+        "id": "5fdbc951.70e8d",
+        "type": "template",
+        "z": "340c01ee.e2eb16",
+        "name": "SQL Tabelle Punkte",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL `sp_tabelle_spiellisten`(\"punkte\"); ",
+        "output": "str",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "ff9f0e1b.ef4dc"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "ff9f0e1b.ef4dc",
+        "type": "mysql",
+        "z": "340c01ee.e2eb16",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 690,
+        "y": 277,
+        "wires": [
+            [
+                "f71d0571.5a9df"
+            ]
+        ]
+    },
+    {
+        "id": "f71d0571.5a9df",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 277,
+        "wires": [
+            [
+                "2bd379ec.f65a76"
+            ]
+        ]
+    },
+    {
+        "id": "eb213c07.2c6fe",
+        "type": "ui_template",
+        "z": "340c01ee.e2eb16",
+        "group": "d5de2251.0a1408",
+        "name": "Tabelle Punkte",
+        "order": 2,
+        "width": "17",
+        "height": "7",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table>\n    <tr>\n        <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 1180,
+        "y": 277,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bd379ec.f65a76",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 277,
+        "wires": [
+            [
+                "eb213c07.2c6fe"
+            ]
+        ]
+    },
+    {
+        "id": "1e71fa16.8737ae",
+        "type": "debug",
+        "z": "340c01ee.e2eb16",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 890,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5de38ce8.028b84",
+        "type": "template",
+        "z": "340c01ee.e2eb16",
+        "name": "SQL Tabelle Beträge",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CALL `sp_tabelle_spiellisten`(\"betrag\"); ",
+        "output": "str",
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "c4634e9.75f08b"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "c4634e9.75f08b",
+        "type": "mysql",
+        "z": "340c01ee.e2eb16",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 690,
+        "y": 337,
+        "wires": [
+            [
+                "a158233e.a847d8"
+            ]
+        ]
+    },
+    {
+        "id": "a158233e.a847d8",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "resultset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 337,
+        "wires": [
+            [
+                "5fb2b88f.6cb3f8"
+            ]
+        ]
+    },
+    {
+        "id": "5f6ce36b.ac7364",
+        "type": "ui_template",
+        "z": "340c01ee.e2eb16",
+        "group": "b196fe2c.6eb3f",
+        "name": "Tabelle Beträge",
+        "order": 2,
+        "width": "17",
+        "height": "7",
+        "format": "<style>\n    {{msg.css_style}}\n</style>\n\n\n<table>\n    <tr>\n        <th ng-repeat=\"(key,value) in msg.payload[0]\">{{key}}</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td ng-repeat=\"(key,value) in obj\">{{value}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1180,
+        "y": 337,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5fb2b88f.6cb3f8",
+        "type": "change",
+        "z": "340c01ee.e2eb16",
+        "name": "get css",
+        "rules": [
+            {
+                "t": "set",
+                "p": "css_style",
+                "pt": "msg",
+                "to": "css_style",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 337,
+        "wires": [
+            [
+                "5f6ce36b.ac7364"
+            ]
+        ]
+    },
+    {
+        "id": "5d4d40d2.e3432",
+        "type": "mysql",
+        "z": "340c01ee.e2eb16",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 750,
+        "y": 500,
+        "wires": [
+            [
+                "e1b1276a.72ec3"
+            ]
+        ]
+    },
+    {
+        "id": "441a6682.88c218",
+        "type": "inject",
+        "z": "340c01ee.e2eb16",
+        "name": "Manual trigger",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "b617fa7c.8abd78"
+            ]
+        ]
+    },
+    {
+        "id": "e1b1276a.72ec3",
+        "type": "function",
+        "z": "340c01ee.e2eb16",
+        "name": "Chart Input",
+        "func": "// To display a complete chart in one go - for example from a set of points retrieved from a database, \n// the data must be supplied in the form of an array, that holds an object that has series,labels, and data arrays. \n\nvar tmpl = [{\"series\":[], \"data\":[], \"labels\":[]}];\n\nfor (var obj of msg.payload){ \n    if (Array.isArray(obj) === true){\n        tmpl[0].series.push(obj[0].spieler);\n        var data = [];\n        for (var rec of obj){\n            data.push({\"x\": rec.spiel_id, \"y\":rec.running_total});\n        }\n        tmpl[0].data.push(data);\n    }\n}\n\nmsg.payload = tmpl;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "14e749a0.3aa17e"
+            ]
+        ]
+    },
+    {
+        "id": "3da4a71b.82f02",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">spiel",
+        "func": "if (msg.payload.length > 0){\n    flow.set(\"spiel\", msg.payload[0]);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "a4acc8fc.eaffc8"
+            ]
+        ]
+    },
+    {
+        "id": "e1b9ef47.89d928",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">serie",
+        "func": "if (msg.payload.length > 0){\n    global.set(\"serie\", msg.payload[0]);\n}\n\ntry {\nif (flow.get(\"spiel\").spielnummer > 0){\n    flow.set(\"spiel\", { \"spielnummer\": global.get(\"serie\").spiele });\n}\n}\n\ncatch(err){\n    flow.set(\"spiel\", { \"spielnummer\": global.get(\"serie\").spiele });\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "8191bb1e.c49e3"
+            ]
+        ]
+    },
+    {
+        "id": "dd3574fa.51cd58",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">bock",
+        "func": "if (msg.payload === true){\n    flow.set(\"spiel.bock\", \"X\");\n} else\n{\n    flow.set(\"spiel.bock\", \"\");\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce3a92ab.2206b",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">bock",
+        "func": "if (msg.payload === true){\n    flow.set(\"spiel.kontra\", \"X\");\n} else\n{\n    flow.set(\"spiel.kontra\", \"\");\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b282a267.146c98",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": ">re",
+        "func": "if (msg.payload === true){\n    flow.set(\"spiel.re\");\n} else\n{\n    flow.set(\"spiel.re\", \"\");\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cecc90b.8d7df8",
+        "type": "inject",
+        "z": "dab61356.33b5b",
+        "name": "Boot",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "e0120e5c.d2779",
+                "47ab7e47.55115",
+                "76678e12.27db1",
+                "8380aef7.70d418",
+                "a75a08b7.0b8178",
+                "ad326a0a.4f8978",
+                "b3099a73.deac4"
+            ]
+        ]
+    },
+    {
+        "id": "e0120e5c.d2779",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "css",
+        "field": "css_style",
+        "fieldType": "global",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "table {\n    color: #333;\n    font-family: Helvetica, Arial, sans-serif;\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n}\ntd, th {\n    border: 1px solid transparent;\n    /* No more visible border */\n    height: 30px;\n    transition: all 0.3s;\n    /* Simple transition for hover effect */\n}\nth {\n    background: #DFDFDF;\n    /* Darken header a bit */\n    font-weight: bold;\n}\ntd {\n    background: #FAFAFA;\n    text-align: center;\n}\n\n/* Cells in even rows (2,4,6...) are one color */\n\ntr:nth-child(even) td {\n    background: #F1F1F1;\n}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */\n\ntr:nth-child(odd) td {\n    background: #FEFEFE;\n}\ntr td:hover {\n    background: #666;\n    color: #FFF;\n}\n\n/* Fixed Table Header */\n\n.fixed_header{\n    width: 100%;\n    table-layout: fixed;\n    border-collapse: collapse;\n}\n\n.fixed_header tbody{\n  display:block;\n  width: 100%;\n  overflow: auto;\n  height: 320px;\n}\n\n.fixed_header thead tr {\n   display: block;\n}\n\n.fixed_header thead {\n  background: #fff;\n  color:#000;\n}\n\n.fixed_header th, .fixed_header td {\n  padding: 5px;\n  text-align: left;\n  width: 200px;\n}",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e7701a7.c4ded8",
+        "type": "link out",
+        "z": "dab61356.33b5b",
+        "name": "Boot",
+        "links": [
+            "26a6e9aa.8b729e",
+            "cb140a86.a3872"
+        ],
+        "x": 375,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "47ab7e47.55115",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "SQL Reizwerte",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select 0 as wert\nunion \nselect distinct wert from spielwerte \norder by wert asc;\n",
+        "output": "str",
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "ba74db46.c56b8"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "ba74db46.c56b8",
+        "type": "mysql",
+        "z": "dab61356.33b5b",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "976536d0.2f2d"
+            ]
+        ]
+    },
+    {
+        "id": "976536d0.2f2d",
+        "type": "change",
+        "z": "dab61356.33b5b",
+        "name": ">reizwerte",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reizwerte",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a44874b3.09d33",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Reizwert",
+        "label": "Gereizt",
+        "tooltip": "",
+        "place": "",
+        "group": "62fd83c.7540a7c",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1140,
+        "y": 340,
+        "wires": [
+            [
+                "cdba96b.be50368"
+            ]
+        ]
+    },
+    {
+        "id": "f21b4e6e.7838b8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.options = global.get(\"reizwerte\").map(a => a.wert);\nmsg.payload = flow.get(\"spiel\").reizwert;\nif (msg.payload === undefined){\n    msg.payload = 18;\n}\nreturn [{\"payload\":null},msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 936,
+        "y": 346,
+        "wires": [
+            [
+                "a44874b3.09d33"
+            ],
+            [
+                "d21ccfb7.a24aa8"
+            ]
+        ]
+    },
+    {
+        "id": "d21ccfb7.a24aa8",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "a44874b3.09d33"
+            ]
+        ]
+    },
+    {
+        "id": "76678e12.27db1",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "SQL Grundspiele",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT grundspiel\nFROM grundspiele\nORDER BY `order` ASC\n;\n\n\n",
+        "output": "str",
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "42aa3bd.9c76a44"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "42aa3bd.9c76a44",
+        "type": "mysql",
+        "z": "dab61356.33b5b",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "51c35e74.9f9f"
+            ]
+        ]
+    },
+    {
+        "id": "8380aef7.70d418",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "SQL Gewinnstufen",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT DISTINCT gewinnstufe\nFROM spielwerte\n;\n\n\n",
+        "output": "str",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "a06529d9.1ca828"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "a06529d9.1ca828",
+        "type": "mysql",
+        "z": "dab61356.33b5b",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "f8bda72c.41102"
+            ]
+        ]
+    },
+    {
+        "id": "51c35e74.9f9f",
+        "type": "change",
+        "z": "dab61356.33b5b",
+        "name": ">grundspiele",
+        "rules": [
+            {
+                "t": "set",
+                "p": "grundspiele",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8bda72c.41102",
+        "type": "change",
+        "z": "dab61356.33b5b",
+        "name": ">gewinnstufen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gewinnstufen",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a75a08b7.0b8178",
+        "type": "delay",
+        "z": "dab61356.33b5b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 270,
+        "y": 20,
+        "wires": [
+            [
+                "7e7701a7.c4ded8"
+            ]
+        ]
+    },
+    {
+        "id": "ad326a0a.4f8978",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "SQL Spitzen",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select CAST(seq as INT) - 11 as spitze \nfrom seq_0_to_22;",
+        "output": "str",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "6b616183.41019"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "6b616183.41019",
+        "type": "mysql",
+        "z": "dab61356.33b5b",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "d23da008.cfda18"
+            ]
+        ]
+    },
+    {
+        "id": "d23da008.cfda18",
+        "type": "change",
+        "z": "dab61356.33b5b",
+        "name": ">spitzen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spitzen",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a4cd66f.cbc4da",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Spitzen",
+        "label": "",
+        "tooltip": "",
+        "place": "Spitzen",
+        "group": "812c1947.8e3e78",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1140,
+        "y": 460,
+        "wires": [
+            [
+                "1ab59fce.735de"
+            ]
+        ]
+    },
+    {
+        "id": "961be0b3.601bc8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.options = global.get(\"spitzen\").map(a => a.spitze);\nmsg.payload = flow.get(\"spiel\").spitzen;\nif (flow.get(\"spiel\").spitzen === undefined) {\n    msg.payload = 0;    \n}\n\nreturn [{\"payload\":null},msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 936,
+        "y": 466,
+        "wires": [
+            [
+                "3a4cd66f.cbc4da"
+            ],
+            [
+                "188f5216.b9525e"
+            ]
+        ]
+    },
+    {
+        "id": "188f5216.b9525e",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1040,
+        "y": 500,
+        "wires": [
+            [
+                "3a4cd66f.cbc4da"
+            ]
+        ]
+    },
+    {
+        "id": "a655d775.8f445",
+        "type": "ui_dropdown",
+        "z": "9c631078.7c4b3",
+        "name": "Augen",
+        "label": "Augen",
+        "tooltip": "",
+        "place": "",
+        "group": "62fd83c.7540a7c",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 1130,
+        "y": 560,
+        "wires": [
+            [
+                "ab53fc98.0820b"
+            ]
+        ]
+    },
+    {
+        "id": "9aa7d191.c22868",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "set widget",
+        "func": "msg.options = global.get(\"augen\").map(a => a.augen);\nmsg.payload = flow.get(\"spiel\").augen;\nif (flow.get(\"spiel\").augen === undefined) {\n    msg.payload = 60;    \n}\n\nreturn [{\"payload\":null},msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 936,
+        "y": 566,
+        "wires": [
+            [
+                "a655d775.8f445"
+            ],
+            [
+                "7bb326a0.3f7d6"
+            ]
+        ]
+    },
+    {
+        "id": "7bb326a0.3f7d6",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1040,
+        "y": 600,
+        "wires": [
+            [
+                "a655d775.8f445"
+            ]
+        ]
+    },
+    {
+        "id": "b3099a73.deac4",
+        "type": "template",
+        "z": "dab61356.33b5b",
+        "name": "SQL Augen",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select seq as augen \nfrom seq_0_to_120;",
+        "output": "str",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "520e1d65.853d1c"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "520e1d65.853d1c",
+        "type": "mysql",
+        "z": "dab61356.33b5b",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "e5add7d8.1fbe68"
+            ]
+        ]
+    },
+    {
+        "id": "e5add7d8.1fbe68",
+        "type": "change",
+        "z": "dab61356.33b5b",
+        "name": ">augen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "augen",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0ed8c6d.d4eb9",
+        "type": "debug",
+        "z": "340c01ee.e2eb16",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 270,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8ed0a144.d31e",
+        "type": "catch",
+        "z": "340c01ee.e2eb16",
+        "name": "",
+        "scope": null,
+        "x": 120,
+        "y": 40,
+        "wires": [
+            [
+                "d0ed8c6d.d4eb9"
+            ]
+        ]
+    },
+    {
+        "id": "3a1f3d85.c0c582",
+        "type": "ui_button",
+        "z": "340c01ee.e2eb16",
+        "name": "",
+        "group": "9c8a547c.ca439",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "7c429e8e.aa0c1",
+                "6facd392.e170d4",
+                "5fdbc951.70e8d",
+                "5de38ce8.028b84",
+                "b617fa7c.8abd78"
+            ]
+        ]
+    },
+    {
+        "id": "14e749a0.3aa17e",
+        "type": "ui_chart",
+        "z": "340c01ee.e2eb16",
+        "name": "",
+        "group": "ebbe3fa0.6b6768",
+        "order": 4,
+        "width": "18",
+        "height": "11",
+        "label": "Historie",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#990099",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1100,
+        "y": 500,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b617fa7c.8abd78",
+        "type": "template",
+        "z": "340c01ee.e2eb16",
+        "name": "Names",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[\"Miki\",\"Bernd\",\"Leif\"]",
+        "output": "json",
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "92b31fb9.a37d38"
+            ]
+        ],
+        "icon": "node-red/parser-json.png"
+    },
+    {
+        "id": "92b31fb9.a37d38",
+        "type": "function",
+        "z": "340c01ee.e2eb16",
+        "name": "SQL Build",
+        "func": "var sql = \"\";\nvar sql_tmpl = \"CALL `sp_spieler_running_total`(\\\"$SPIELER\\\");\"\n\nfor (var spieler of msg.payload){\n    sql = sql + sql_tmpl.replace(\"$SPIELER\", spieler);\n}\n\nmsg.topic = sql;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "5d4d40d2.e3432"
+            ]
+        ]
+    },
+    {
+        "id": "370f5520.f7f41a",
+        "type": "ui_button",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "group": "52d646af.227228",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "1a1320ae.660d6f"
+            ]
+        ]
+    },
+    {
+        "id": "86a48724.16a288",
+        "type": "function",
+        "z": "18e32c36.87e98c",
+        "name": "Set Options",
+        "func": "// reformat options read from db\nmsg.options = msg.payload.map(item => {\n const option = {};\n \n option[item.label] = item.id;\n \n return option;\n    \n})\n\n// add New item\nconst newitem = { \"New\": Object.values(msg.options[0])[0] + 1};\nmsg.options.unshift(newitem);\n\ntry {\nmsg.payload = global.get(\"serie\").id;\n}\ncatch (err){\n    msg.payload = 1;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "c00de378.29f3c"
+            ]
+        ]
+    },
+    {
+        "id": "bdacf610.c0c778",
+        "type": "delay",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "8ec3c2c4.3a69",
+                "355a89a0.9dc4c6"
+            ]
+        ]
+    },
+    {
+        "id": "cb140a86.a3872",
+        "type": "link in",
+        "z": "340c01ee.e2eb16",
+        "name": "Übersicht recalc",
+        "links": [
+            "7e7701a7.c4ded8"
+        ],
+        "x": 155,
+        "y": 340,
+        "wires": [
+            [
+                "3a1f3d85.c0c582"
+            ]
+        ]
+    },
+    {
+        "id": "138b5d15.5d4d9b",
+        "type": "link out",
+        "z": "18e32c36.87e98c",
+        "name": "",
+        "links": [
+            "26a6e9aa.8b729e"
+        ],
+        "x": 755,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "760a3632.1b775",
+        "type": "mysql",
+        "z": "9c631078.7c4b3",
+        "mydb": "8b5dbf99.c90fd",
+        "name": "skat",
+        "x": 790,
+        "y": 100,
+        "wires": [
+            [
+                "383d412c.b2bba6"
+            ]
+        ]
+    },
+    {
+        "id": "2ebb7e1c.93b68a",
+        "type": "template",
+        "z": "9c631078.7c4b3",
+        "name": "Spielnummern",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select seq as spielnummer from seq_1_to_50 \nWHERE \nseq <= {{global.serie.spiele}} \n;",
+        "output": "str",
+        "x": 640,
+        "y": 100,
+        "wires": [
+            [
+                "760a3632.1b775"
+            ]
+        ],
+        "icon": "node-red/db.png"
+    },
+    {
+        "id": "922c84f7.f4c34",
+        "type": "delay",
+        "z": "9c631078.7c4b3",
+        "name": "1ms",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "8cf94acb.01b9e8"
+            ]
+        ]
+    },
+    {
+        "id": "3e7e8d05.3908b2",
+        "type": "link in",
+        "z": "9c631078.7c4b3",
+        "name": "DB: Read Serie",
+        "links": [
+            "d720c07f.ea397"
+        ],
+        "x": 55,
+        "y": 340,
+        "wires": [
+            [
+                "8191bb1e.c49e3"
+            ]
+        ]
+    },
+    {
+        "id": "96a33ba6.6a486",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "New Spiel?",
+        "func": "if (flow.get(\"spiel\").spielnummer === 0){\n    flow.set(\"spiel.spielnummer\", global.get(\"serie\").spiele +1);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1270,
+        "y": 1140,
+        "wires": [
+            [
+                "dd2e959d.071eb"
+            ]
+        ]
+    },
+    {
+        "id": "f7d2211e.d3ef8",
+        "type": "function",
+        "z": "9c631078.7c4b3",
+        "name": "Set \"New\" Spiel",
+        "func": "flow.set(\"spiel\", \n{\n    \"serie_id\" : global.get(\"serie\"),\n    \"spielnummer\" : 0\n});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2060,
+        "y": 1140,
+        "wires": [
+            [
+                "dd54228c.f0717"
+            ]
+        ]
+    },
+    {
+        "id": "f362c0af.5c72",
+        "type": "debug",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1570,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "6730c7b0.3d5478",
+        "type": "debug",
+        "z": "9c631078.7c4b3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 390,
+        "y": 180,
+        "wires": []
+    }
+]
