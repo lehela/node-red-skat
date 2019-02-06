@@ -150,7 +150,7 @@
         "z": "",
         "host": "127.0.0.1",
         "port": "3306",
-        "db": "skat",
+        "db": "skatliste",
         "tz": ""
     },
     {
@@ -2255,8 +2255,7 @@
         "y": 260,
         "wires": [
             [
-                "e1b9ef47.89d928",
-                "6730c7b0.3d5478"
+                "e1b9ef47.89d928"
             ]
         ]
     },
@@ -3953,20 +3952,6 @@
         "complete": "true",
         "x": 1570,
         "y": 1360,
-        "wires": []
-    },
-    {
-        "id": "6730c7b0.3d5478",
-        "type": "debug",
-        "z": "9c631078.7c4b3",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 390,
-        "y": 180,
         "wires": []
     }
 ]
