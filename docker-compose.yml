@@ -1,0 +1,63 @@
+version: "3.8"
+
+services: 
+
+  db:
+    image: ghcr.io/linuxserver/mariadb
+    container_name: skatliste-mariadb
+    environment:
+      #- PUID=1000
+      #- PGID=1000
+      - MYSQL_ROOT_PASSWORD=dossene
+      - TZ=Asia/Singapore
+      #- MYSQL_DATABASE=USER_DB_NAME #optional
+      #- MYSQL_USER=MYSQL_USER #optional
+      #- MYSQL_PASSWORD=DATABASE_PASSWORD #optional
+      #- REMOTE_SQL=http://URL1/your.sql,https://URL2/your.sql #optional
+    volumes:
+      - mariadb:/config
+    ports:
+      - 3306:3306
+    networks:
+      - net
+    restart: unless-stopped    
+
+
+  node-red:
+    image: nodered/node-red:latest
+    container_name: skatliste-node-red
+    ports:
+      - "1880:1880"
+    networks:
+      - net
+    volumes:
+      - node-red:/data    
+    restart: unless-stopped   
+
+
+  backup:
+    build: 
+      context: .
+      dockerfile: backup/Dockerfile
+      labels: 
+        com.lehela.description: "Skatliste Backup"
+    image: skatliste-backup
+    container_name: skatliste-backup
+    networks: 
+      - net
+    volumes: 
+      - type: volume
+        source: node-red
+        target: /data
+        read_only: true
+      - type: bind
+        source: /media/cloud/Development/node-red-skat
+        target: /backup
+    restart: unless-stopped   
+
+networks: 
+    net:
+        driver: bridge
+volumes: 
+    mariadb:
+    node-red:
